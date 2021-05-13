@@ -1,8 +1,10 @@
 # Luxray
-A C++ wrapper for Raylib called Luxray, created of an Epitech Project.
+<p align="center">
+  A C++ wrapper for Raylib called Luxray, created of an Epitech Project.
+</p>
 
 <p align="center">
-  <img src="http://pa1.narvii.com/6240/55852d109f8609f7106fe871da77a86cc5e1698d_00.gif" width="350" title="Luxray for Lux and Raylib :o">
+  <img src="https://i.pinimg.com/originals/6d/db/41/6ddb4145a7a1bc3ff3cd5c6bf7ee9097.jpg" width="350" title="Luxray for Lux and Raylib :o">
 </p>
 
 <p align="center">

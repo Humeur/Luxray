@@ -18,3 +18,15 @@
 <p align="center">
   Donate to the creator of Raylib: https://github.com/sponsors/raysan5
 </p>
+
+Additions :
+
+- functions are now camelCase
+- renamed functions with more oo type like : .isWindowFullscreen is now .isFullscreen
+- added functions like .getScreensize
+- now getter and setter are the only way to access data
+- destructor now unload object
+- optional parameters for some methods
+- method overrides
+- method chaining
+- string function and in general using cpp type (char * -> std::string, char ** -> vector)

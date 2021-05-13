@@ -7,8 +7,12 @@ A C++ wrapper for Raylib called Luxray, created of an Epitech Project.
 
 <p align="center">
   Raylib: https://www.raylib.com/index.html
+</p>
 
-A more efficient and complet wrap of Raylib in C++: https://github.com/RobLoach/raylib-cpp
+<p align="center">
+  A more efficient and complet wrap of Raylib in C++: https://github.com/RobLoach/raylib-cpp
+</p>
 
-Donate to the creator of Raylib: https://github.com/sponsors/raysan5
+<p align="center">
+  Donate to the creator of Raylib: https://github.com/sponsors/raysan5
 </p>

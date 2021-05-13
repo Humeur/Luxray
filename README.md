@@ -23,7 +23,7 @@ Additions :
 
 - functions are now camelCase
 - renamed functions with more oo type like : .isWindowFullscreen is now .isFullscreen
-- added functions like .getScreensize
+- added functions like .getCurrentMonitor...
 - now getter and setter are the only way to access data
 - destructor now unload object
 - optional parameters for some methods

@@ -1,5 +1,5 @@
-# raylib-cpp
-A C++ wrapper for Raylib called Lux, created of an Epitech Project.
+# Luxray
+A C++ wrapper for Raylib called Luxray, created of an Epitech Project.
 
 Raylib: https://www.raylib.com/index.html
 

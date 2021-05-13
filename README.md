@@ -1,5 +1,5 @@
 # raylib-cpp
-A C++ wrapper for Raylib called Lux, create of an Epitech Project.
+A C++ wrapper for Raylib called Lux, created of an Epitech Project.
 
 Raylib: https://www.raylib.com/index.html
 

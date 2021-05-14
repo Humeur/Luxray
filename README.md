@@ -1,6 +1,6 @@
 <h1 align="center">Luxray</h1>
 <p align="center">
-  A C++ wrapper for Raylib called Luxray, created of an Epitech Project.
+  A C++ wrapper for Raylib called Luxray, created for an Epitech Project.
 </p>
 
 <p align="center">

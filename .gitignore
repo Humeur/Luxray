@@ -34,3 +34,6 @@
 # Luxray
 .obj/
 bin/
+
+# CLION
+.idea

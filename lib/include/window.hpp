@@ -260,6 +260,108 @@ namespace Luxray {
                 return ::GetTime();
             }
 
+            // Set background color (framebuffer clear color)
+            inline Window &clearBackground(Color color = WHITE) {
+                ::ClearBackground(color)
+                return *this;
+            }
+
+            // Setup canvas (framebuffer) to start drawing
+            inline Window &beginDrawing() {
+                ::BeginDrawing();
+                return *this;
+            }
+
+            // End canvas drawing and swap buffers (double buffering)
+            inline Window &endDrawing() {
+                ::EndDrawing();
+                return *this;
+            }
+
+            // Initialize 2D mode with custom camera (2D)
+            inline Window &beginMode2D(Camera2D camera) {
+                ::BeginMode2D(camera);
+                return *this;
+            }
+
+            // Ends 2D mode with custom camera
+            inline Window &endMode2D() {
+                ::EndMode2D();
+                return *this;
+            }
+
+            // Initializes 3D mode with custom camera (3D)
+            inline Window &BeginMode3D(Camera3D camera) {
+                ::BeginMode3D(camera);
+                return *this;
+            }
+
+            // Ends 3D mode and returns to default 2D orthographic mode
+            inline Window &endMode3D() {
+                ::EndMode3D();
+                return *this;
+            }
+
+            // Initializes render texture for drawing
+            inline Window &beginTextureMode(RenderTexture2D target) {
+                ::BeginTextureMode(RenderTexture2D target);
+                return *this;
+            }
+
+            // Ends drawing to render texture
+            inline Window &endTextureMode() {
+                ::EndTextureMode();
+                return *this;
+            }
+
+            // Begin custom shader drawing
+            inline Window &beginShaderMode(Shader shader) {
+                ::BeginShaderMode(shader);
+                return *this;
+            }
+
+            // End custom shader drawing (use default shader)
+            inline Window &endShaderMode() {
+                ::EndShaderMode();
+                return *this;
+            }
+
+            // Begin blending mode (alpha, additive, multiplied)
+            inline Window &beginBlendMode(int mode) {
+                ::BeginBlendMode(mode);
+                return *this;
+            }
+
+            // End blending mode (reset to default: alpha blending)
+            inline Window &endBlendMode() {
+                ::EndBlendMode();
+                return *this;
+            }
+
+            // Begin scissor mode (define screen area for following drawing)
+            inline Window &beginScissorMode(int x, int y, int width, int height) {
+                ::BeginScissorMode(x, y, width, height);
+                return *this;
+            }
+
+            // End scissor mode
+            inline Window &endScissorMode() {
+                ::EndScissorMode();
+                return *this;
+            }
+
+            // Begin stereo rendering
+            inline Window &beginVrStereoMode(VrStereoConfig config) {
+                ::BeginVrStereoMode(config);
+                return *this;
+            }
+
+            // End stereo rendering
+            inline Window &endVrStereoMode() {
+                ::EndVrStereoMode();
+                return *this;
+            }
+
             /*
              * Added functions
              */

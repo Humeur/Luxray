@@ -11,7 +11,7 @@ int main()
     LR::Window window(1920, 1080, "Test");
 
     window.setPosition(0,0)
-            .setClipboard("Test123");
+          .setClipboard("Test123");
 
     SetTargetFPS(60);
 

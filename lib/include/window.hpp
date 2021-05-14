@@ -239,6 +239,27 @@ namespace Luxray {
                 return clipboard;
             }
 
+            // Set target FPS (maximum)
+            inline Window &setTargetFPS(int fps) {
+                ::SetTargetFPS(fps);
+                return *this;
+            }
+
+            // Returns current FPS
+            int getFPS() {
+                return ::GetFPS();
+            }
+
+            // Returns time in seconds for last frame drawn (delta time)
+            float getFrameTime() {
+                return ::GetFrameTime();
+            }
+
+            // Returns elapsed time in seconds since InitWindow()
+            double getTime() {
+                return ::GetTime();
+            }
+
             /*
              * Added functions
              */

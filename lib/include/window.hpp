@@ -246,17 +246,17 @@ namespace Luxray {
             }
 
             // Returns current FPS
-            int getFPS() {
+            inline int getFPS() {
                 return ::GetFPS();
             }
 
             // Returns time in seconds for last frame drawn (delta time)
-            float getFrameTime() {
+            inline float getFrameTime() {
                 return ::GetFrameTime();
             }
 
             // Returns elapsed time in seconds since InitWindow()
-            double getTime() {
+            inline double getTime() {
                 return ::GetTime();
             }
 

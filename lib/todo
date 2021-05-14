@@ -1,13 +1,4 @@
 
-
-    // Cursor-related functions
-    void ShowCursor(void);                                                  // Shows cursor
-    void HideCursor(void);                                                  // Hides cursor
-    bool IsCursorHidden(void);                                              // Check if cursor is not visible
-    void EnableCursor(void);                                                // Enables cursor (unlock cursor)
-    void DisableCursor(void);                                               // Disables cursor (lock cursor)
-    bool IsCursorOnScreen(void);                                            // Check if cursor is on the current screen.
-
     // Drawing-related functions
     void ClearBackground(Color color);                                      // Set background color (framebuffer clear color)
     void BeginDrawing(void);                                                // Setup canvas (framebuffer) to start drawing

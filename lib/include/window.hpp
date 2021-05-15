@@ -151,7 +151,7 @@ namespace Luxray {
 
             // Set window dimensions
             inline Window &setSize(int width, int height) {
-                ::SetWindowMinSize(width, height);
+                ::SetWindowSize(width, height);
                 return *this;
             }
 

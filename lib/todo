@@ -89,20 +89,6 @@
     float GetGamepadAxisMovement(int gamepad, int axis);                    // Return axis movement value for a gamepad axis
     int SetGamepadMappings(const char *mappings);                           // Set internal gamepad mappings (SDL_GameControllerDB)
 
-    // Input-related functions: mouse
-    bool IsMouseButtonPressed(int button);                                  // Detect if a mouse button has been pressed once
-    bool IsMouseButtonDown(int button);                                     // Detect if a mouse button is being pressed
-    bool IsMouseButtonReleased(int button);                                 // Detect if a mouse button has been released once
-    bool IsMouseButtonUp(int button);                                       // Detect if a mouse button is NOT being pressed
-    int GetMouseX(void);                                                    // Returns mouse position X
-    int GetMouseY(void);                                                    // Returns mouse position Y
-    Vector2 GetMousePosition(void);                                         // Returns mouse position XY
-    void SetMousePosition(int x, int y);                                    // Set mouse position XY
-    void SetMouseOffset(int offsetX, int offsetY);                          // Set mouse offset
-    void SetMouseScale(float scaleX, float scaleY);                         // Set mouse scaling
-    float GetMouseWheelMove(void);                                          // Returns mouse wheel movement Y
-    void SetMouseCursor(int cursor);                                        // Set mouse cursor
-
     // Input-related functions: touch
     int GetTouchX(void);                                                    // Returns touch position X for touch point 0 (relative to screen size)
     int GetTouchY(void);                                                    // Returns touch position Y for touch point 0 (relative to screen size)

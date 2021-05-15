@@ -197,6 +197,46 @@ namespace Luxray {
             static inline void drawPoly(Vector2 center, int sides, float radius, float rotation, Color color) {
                 ::DrawPolyLines(center, sides, radius, rotation, color);
             }
+
+            // Check collision between two rectangles
+            static inline bool checkCollision(Rectangle rec1, Rectangle rec2) {
+                return ::CheckCollisionRecs(rec1, rec2);
+            }
+
+            // Check collision between two circles
+            static inline bool checkCollision(Vector2 center1, float radius1, Vector2 center2, float radius2) {
+                return ::CheckCollisionCircle(center1, radius1, center2, radius2);
+            }
+
+            // Check collision between circle and rectangle
+            static inline bool checkCollision(Vector2 center, float radius, Rectangle rec) {
+                return ::CheckCollisionCircleRec(center, radius, rec);
+            }
+
+            // Check if point is inside rectangle
+            static inline bool checkCollision(Vector2 point, Rectangle rec) {
+                return ::CheckCollisionPointRec(point, rec);
+            }
+
+            // Check if point is inside circle
+            static inline bool checkCollision(Vector2 point, Vector2 center, float radius) {
+                return ::CheckCollisionPointCircle(point, center, radius);
+            }
+
+            // Check if point is inside a triangle
+            static inline bool checkCollision(Vector2 point, Vector2 p1, Vector2 p2, Vector2 p3) {
+                return ::CheckCollisionPointTriangle(point, p1, p2, p3);
+            }
+
+            // Check the collision between two lines defined by two points each, returns collision point by reference
+            static inline bool checkCollision(Vector2 startPos1, Vector2 endPos1, Vector2 startPos2, Vector2 endPos2, Vector2 *collisionPoint) {
+                return ::CheckCollisionLines(startPos1, endPos1, startPos2, endPos2, collisionPoint);
+            }
+
+            // Get collision rectangle for two rectangles collision
+            static inline Rectangle getCollision(Rectangle rec1, Rectangle rec2) {
+                return ::GetCollisionRec(rec1, rec2);
+            }
     };
 }
 

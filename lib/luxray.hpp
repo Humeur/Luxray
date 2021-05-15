@@ -11,9 +11,6 @@
 #include "include/keyboard.hpp"
 #include "include/mouse.hpp"
 #include "include/window.hpp"
-
-namespace Luxray {}
-
-namespace LR = Luxray;
+#include "include/shapes.hpp"
 
 #endif

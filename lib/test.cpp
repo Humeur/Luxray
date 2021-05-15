@@ -18,7 +18,7 @@ class Bob {
 
 int main()
 {
-    LR::Window window(1920, 1080, "Bob's Adventure");
+    /*LR::Window window(1920, 1080, "Bob's Adventure");
 
     window.setPosition(0,0)
           .setTargetFPS(60)
@@ -48,5 +48,22 @@ int main()
         });
     }
 
-    return 0;
+    return 0;*/
+
+    LR::Window window;
+
+    window.setTitle("Wheel of chance !")
+          .setSize(window.getMonitorWidth(), window.getMonitorHeight())
+          .setTargetFPS(60)
+          .setPosition(0, 0)
+          .setState(FLAG_WINDOW_RESIZABLE);
+
+    LR::Cursor::disable();
+    LR::Cursor::hide();
+
+    while (!window.shouldClose()) {
+        LR::Window::draw([]() {
+            LR::Window::clearBackground(BLACK);
+        });
+    }
 }

@@ -10,6 +10,6 @@
 #include "raylib.h"
 
 namespace Luxray {}
-namespace Lr = Luxray;
+namespace LR = Luxray;
 
 #endif

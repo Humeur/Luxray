@@ -240,5 +240,4 @@ namespace Luxray {
     };
 }
 
-
 #endif

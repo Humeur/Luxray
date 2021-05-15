@@ -9,76 +9,79 @@
 
 #include "raylib_inc.hpp"
 
-class Mouse {
-    public:
-        Mouse() {}
-        ~Mouse() {}
+namespace Luxray {
+    class Mouse {
+        public:
+            Mouse() {}
 
-        // Detect if a mouse button has been pressed once
-        static inline bool isButtonPressed(int button) {
-            return ::IsMouseButtonPressed(button);
-        }
+            ~Mouse() {}
 
-        // Detect if a mouse button is being pressed
-        static inline bool isButtonDown(int button) {
-            return ::IsMouseButtonDown(button);
-        }
+            // Detect if a mouse button has been pressed once
+            static inline bool isButtonPressed(int button) {
+                return ::IsMouseButtonPressed(button);
+            }
 
-        // Detect if a mouse button has been released once
-        static inline bool isButtonReleased(int button) {
-            return ::IsMouseButtonReleased(button);
-        }
+            // Detect if a mouse button is being pressed
+            static inline bool isButtonDown(int button) {
+                return ::IsMouseButtonDown(button);
+            }
 
-        // Detect if a mouse button is NOT being pressed
-        static inline bool isButtonUp(int button) {
-            return ::IsMouseButtonUp(button);
-        }
+            // Detect if a mouse button has been released once
+            static inline bool isButtonReleased(int button) {
+                return ::IsMouseButtonReleased(button);
+            }
 
-        // Returns mouse position X
-        static inline int getX() {
-            return ::GetMouseX();
-        }
+            // Detect if a mouse button is NOT being pressed
+            static inline bool isButtonUp(int button) {
+                return ::IsMouseButtonUp(button);
+            }
 
-        // Returns mouse position Y
-        static inline int getY() {
-            return ::GetMouseY();
-        }
+            // Returns mouse position X
+            static inline int getX() {
+                return ::GetMouseX();
+            }
 
-        // Returns mouse position XY
-        static inline Vector2 getPosition() {
-            return ::GetMousePosition();
-        }
+            // Returns mouse position Y
+            static inline int getY() {
+                return ::GetMouseY();
+            }
 
-        // Set mouse position XY
-        static inline void setPosition(int x, int y) {
-            return ::SetMousePosition(x, y);
-        }
+            // Returns mouse position XY
+            static inline Vector2 getPosition() {
+                return ::GetMousePosition();
+            }
 
-        // Set mouse offset
-        static inline void setOffset(int offsetX, int offsetY) {
-            return ::SetMouseOffset(offsetX, offsetY);
-        }
+            // Set mouse position XY
+            static inline void setPosition(int x, int y) {
+                return ::SetMousePosition(x, y);
+            }
 
-        // Set mouse scaling
-        static inline void setScale(float scaleX, float scaleY) {
-            return ::SetMouseScale(scaleX, scaleY);
-        }
+            // Set mouse offset
+            static inline void setOffset(int offsetX, int offsetY) {
+                return ::SetMouseOffset(offsetX, offsetY);
+            }
 
-        // Returns mouse wheel movement Y
-        static inline float getWheelMove() {
-            return ::GetMouseWheelMove();
-        }
+            // Set mouse scaling
+            static inline void setScale(float scaleX, float scaleY) {
+                return ::SetMouseScale(scaleX, scaleY);
+            }
 
-        // Set mouse cursor
-        static inline void setCursor(int cursor) {
-            return ::SetMouseCursor(cursor);
-        }
+            // Returns mouse wheel movement Y
+            static inline float getWheelMove() {
+                return ::GetMouseWheelMove();
+            }
 
-        /*
-        * Added functions
-        */
+            // Set mouse cursor
+            static inline void setCursor(int cursor) {
+                return ::SetMouseCursor(cursor);
+            }
 
-        //Todo add getMousePressedTime (something like that)
-};
+            /*
+            * Added functions
+            */
+
+            //Todo add getMousePressedTime (something like that)
+    };
+}
 
 #endif

@@ -24,8 +24,8 @@ int main()
           .setTargetFPS(60)
           .setSize(window.getMonitorWidth(), window.getMonitorHeight());
 
-    Cursor::disable();
-    Cursor::hide();
+    LR::Cursor::disable();
+    LR::Cursor::hide();
 
     Bob bob;
     bob.x = window.getWidth() / 2;
@@ -33,13 +33,13 @@ int main()
 
     while (!window.shouldClose())
     {
-        bob.size += (Mouse::getWheelMove() * 4);
+        bob.size += (LR::Mouse::getWheelMove() * 4);
 
-        if (Keyboard::isKeyDown(KEY_LEFT_SHIFT)) bob.speed = 3;
-        if (Keyboard::isKeyDown(KEY_RIGHT)) bob.x += 4 * bob.speed;
-        if (Keyboard::isKeyDown(KEY_LEFT)) bob.x -= 4 * bob.speed;
-        if (Keyboard::isKeyDown(KEY_UP)) bob.y -= 4 * bob.speed;
-        if (Keyboard::isKeyDown(KEY_DOWN)) bob.y += 4 * bob.speed;
+        if (LR::Keyboard::isKeyDown(KEY_LEFT_SHIFT)) bob.speed = 3;
+        if (LR::Keyboard::isKeyDown(KEY_RIGHT)) bob.x += 4 * bob.speed;
+        if (LR::Keyboard::isKeyDown(KEY_LEFT)) bob.x -= 4 * bob.speed;
+        if (LR::Keyboard::isKeyDown(KEY_UP)) bob.y -= 4 * bob.speed;
+        if (LR::Keyboard::isKeyDown(KEY_DOWN)) bob.y += 4 * bob.speed;
 
         LR::Window::draw([bob](){
             LR::Window::clearBackground(BLACK);

@@ -9,41 +9,43 @@
 
 #include "raylib_inc.hpp"
 
-class Cursor {
-    public:
-        Cursor() {}
-        ~Cursor() {}
+namespace Luxray {
+    class Cursor {
+        public:
+            Cursor() {}
+            ~Cursor() {}
 
-        // Shows cursor
-        static inline void show() {
-            ::ShowCursor();
-        }
+            // Shows cursor
+            static inline void show() {
+                ::ShowCursor();
+            }
 
-        // Hides cursor
-        static inline void hide() {
-            ::HideCursor();
-        }
+            // Hides cursor
+            static inline void hide() {
+                ::HideCursor();
+            }
 
-        // Check if cursor is not visible
-        static inline bool isHidden() {
-            return ::IsCursorHidden();
-        }
+            // Check if cursor is not visible
+            static inline bool isHidden() {
+                return ::IsCursorHidden();
+            }
 
-        // Enables cursor (unlock cursor)
-        static inline void enable() {
-            ::EnableCursor();
-        }
+            // Enables cursor (unlock cursor)
+            static inline void enable() {
+                ::EnableCursor();
+            }
 
-        // Disables cursor (lock cursor)
-        static inline void disable() {
-            ::DisableCursor();
-        }
+            // Disables cursor (lock cursor)
+            static inline void disable() {
+                ::DisableCursor();
+            }
 
-        // Check if cursor is on the current screen.
-        static inline bool isOnScreen() {
-            return ::IsCursorOnScreen();
-        }
-};
+            // Check if cursor is on the current screen.
+            static inline bool isOnScreen() {
+                return ::IsCursorOnScreen();
+            }
+    };
+}
 
 
 #endif

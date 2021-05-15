@@ -94,13 +94,78 @@ namespace Luxray {
             }
 
             // Draw ellipse
-            static inline void DrawEllipse(int centerX, int centerY, float radiusH, float radiusV, Color color) {
+            static inline void drawEllipse(int centerX, int centerY, float radiusH, float radiusV, Color color) {
                 ::DrawEllipse(centerX, centerY, radiusH, radiusV, color);
             }
 
             // Draw ellipse outline
-            static inline void DrawEllipse(int centerX, int centerY, float radiusH, float radiusV, Color color) {
+            static inline void drawEllipse(int centerX, int centerY, float radiusH, float radiusV, Color color) {
                 ::DrawEllipseLines(centerX, centerY, radiusH, radiusV, color);
+            }
+
+            // Draw ring
+            static inline void drawRing(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color) {
+                ::DrawRing(center, innerRadius, outerRadius, startAngle, endAngle, segments, color);
+            }
+
+            // Draw ring outline
+            static inline void drawRing(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color) {
+                ::DrawRingLines(center, innerRadius, outerRadius, startAngle, endAngle, segments, color);
+            }
+
+            // Draw a color-filled rectangle
+            static inline void drawRectangle(int posX, int posY, int width, int height, Color color) {
+                ::DrawRectangle(posX, posY, width, height, color);
+            }
+
+            // Draw a color-filled rectangle (Vector version)
+            static inline void drawRectangle(Vector2 position, Vector2 size, Color color) {
+                ::DrawRectangleV(position, size, color);
+            }
+
+            // Draw a color-filled rectangle
+            static inline void drawRectangle(Rectangle rec, Color color) {
+                ::DrawRectangleRec(rec, color);
+            }
+
+            // Draw a color-filled rectangle with pro parameters
+            static inline void drawRectangle(Rectangle rec, Vector2 origin, float rotation, Color color) {
+                ::DrawRectanglePro(rec, origin, rotation, color);
+            }
+
+            // Draw a vertical-gradient-filled rectangle
+            static inline void drawRectangle(int posX, int posY, int width, int height, Color color1, Color color2) {
+                ::DrawRectangleGradientV(posX, posY, width, height, color1, color2);
+            }
+
+            // Draw a horizontal-gradient-filled rectangle
+            static inline void drawRectangle(int posX, int posY, int width, int height, Color color1, Color color2) {
+                ::DrawRectangleGradientH(posX, posY, width, height, color1, color2);
+            }
+
+            // Draw a gradient-filled rectangle with custom vertex colors
+            static inline void drawRectangle(Rectangle rec, Color col1, Color col2, Color col3, Color col4) {
+                ::DrawRectangleGradientEx(rec, col1, col2, col3, col4);
+            }
+
+            // Draw rectangle outline
+            static inline void drawRectangle(int posX, int posY, int width, int height, Color color) {
+                ::DrawRectangleLines(posX, posY, width, height, color);
+            }
+
+            // Draw rectangle outline with extended parameters
+            static inline void drawRectangle(Rectangle rec, int lineThick, Color color) {
+                ::DrawRectangleLinesEx(rec, lineThick, color);
+            }
+
+            // Draw rectangle with rounded edges
+            static inline void drawRectangle(Rectangle rec, float roundness, int segments, Color color) {
+                ::DrawRectangleRounded(rec, roundness, segments, color);
+            }
+
+            // Draw rectangle with rounded edges outline
+            static inline void drawRectangle(Rectangle rec, float roundness, int segments, int lineThick, Color color) {
+                ::DrawRectangleRoundedLines(rec, roundness, segments, lineThick, color);
             }
     };
 }

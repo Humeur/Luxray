@@ -69,28 +69,38 @@ namespace Luxray {
             }
 
             // Draw a piece of a circle
-            void drawCircle(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color) {
+            static inline void drawCircle(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color) {
                 ::DrawCircleSector(center, radius, startAngle, endAngle, segments, color)
             }
 
             // Draw circle sector outline
-            void drawCircle(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color) {
+            static inline void drawCircle(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color) {
                 ::DrawCircleSectorLines(center, radius, startAngle, endAngle, segments, color)
             }
 
             // Draw a gradient-filled circle
-            void drawCircle(int centerX, int centerY, float radius, Color color1, Color color2) {
+            static inline void drawCircle(int centerX, int centerY, float radius, Color color1, Color color2) {
                 ::DrawCircleGradient(centerX, centerY, radius, color1, color2);
             }
 
             // Draw a color-filled circle (Vector version)
-            void drawCircle(Vector2 center, float radius, Color color) {
+            static inline void drawCircle(Vector2 center, float radius, Color color) {
                 ::DrawCircleV(center, radius, color);
             }
 
             // Draw circle outline
-            void drawCircle(int centerX, int centerY, float radius, Color color) {
+            static inline void drawCircle(int centerX, int centerY, float radius, Color color) {
                 ::DrawCircleLines(centerX, centerY, radius, color);
+            }
+
+            // Draw ellipse
+            static inline void DrawEllipse(int centerX, int centerY, float radiusH, float radiusV, Color color) {
+                ::DrawEllipse(centerX, centerY, radiusH, radiusV, color);
+            }
+
+            // Draw ellipse outline
+            static inline void DrawEllipse(int centerX, int centerY, float radiusH, float radiusV, Color color) {
+                ::DrawEllipseLines(centerX, centerY, radiusH, radiusV, color);
             }
     };
 }

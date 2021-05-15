@@ -387,58 +387,58 @@ namespace Luxray {
 
             //trigger beginDrawing then fun then end drawing, a all in one drawing function
             static inline void draw(std::function<void()> fun) {
-                this->beginDrawing();
+                Window::beginDrawing();
                 fun();
-                this->endDrawing();
+                Window::endDrawing();
             }
 
             //trigger beginMode2D then fun then endMode2D, a all in one mode2D function
             static inline void mode2D(Camera2D camera, std::function<void()> fun) {
-                this->beginMode2D(camera);
+                Window::beginMode2D(camera);
                 fun();
-                this->endMode2D();
+                Window::endMode2D();
             }
 
             //trigger beginMode3D then fun then endMode3D, a all in one mode3D function
             static inline void mode3D(Camera3D camera, std::function<void()> fun) {
-                this->beginMode3D(camera);
+                Window::beginMode3D(camera);
                 fun();
-                this->endMode3D();
+                Window::endMode3D();
             }
 
             //trigger beginTextureMode then fun then endTextureMode, a all in one textureMode function
             static inline void textureMode(RenderTexture2D target, std::function<void()> fun) {
-                this->beginTextureMode(target);
+                Window::beginTextureMode(target);
                 fun();
-                this->endTextureMode();
+                Window::endTextureMode();
             }
 
             //trigger beginShaderMode then fun then endShaderMode, a all in one shaderMode function
             static inline void shaderMode(Shader shader, std::function<void()> fun) {
-                this->beginShaderMode(shader);
+                Window::beginShaderMode(shader);
                 fun();
-                this->endShaderMode();
+                Window::endShaderMode();
             }
 
             //trigger beginBlendMode then fun then endBlendMode, a all in blendMode function
             static inline void blendMode(int mode, std::function<void()> fun) {
-                this->beginBlendMode(mode);
+                Window::beginBlendMode(mode);
                 fun();
-                this->endBlendMode();
+                Window::endBlendMode();
             }
 
             //trigger beginScissorMode then fun then endScissorMode, a all in one scissorMode function
             static inline void scissorMode(int x, int y, int width, int height, std::function<void()> fun) {
-                this->beginScissorMode(x, y, width, height);
+                Window::beginScissorMode(x, y, width, height);
                 fun();
-                this->endScissorMode();
+                Window::endScissorMode();
             }
 
             //trigger beginVrStereoMode then fun then endVrStereoMode, a all in one drawing function
             static inline void vrStereoMode(VrStereoConfig config, std::function<void()> fun) {
-                this->beginVrStereoMode(config);
+                Window::beginVrStereoMode(config);
                 fun();
-                this->endVrStereoMode();
+                Window::endVrStereoMode();
             }
     };
 }

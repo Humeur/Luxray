@@ -15,36 +15,32 @@ class Cursor {
         ~Cursor() {}
 
         // Shows cursor
-        inline Cursor &show() {
+        static inline void show() {
             ::ShowCursor();
-            return *this;
         }
 
         // Hides cursor
-        inline Cursor &hide() {
+        static inline void hide() {
             ::HideCursor();
-            return *this;
         }
 
         // Check if cursor is not visible
-        inline bool isHidden() {
+        static inline bool isHidden() {
             return ::IsCursorHidden();
         }
 
         // Enables cursor (unlock cursor)
-        inline Cursor &enable() {
+        static inline void enable() {
             ::EnableCursor();
-            return *this;
         }
 
         // Disables cursor (lock cursor)
-        inline Cursor &disable() {
+        static inline void disable() {
             ::DisableCursor();
-            return *this;
         }
 
         // Check if cursor is on the current screen.
-        inline bool isOnScreen() {
+        static inline bool isOnScreen() {
             return ::IsCursorOnScreen();
         }
 };

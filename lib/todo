@@ -76,15 +76,6 @@
 
     void OpenURL(const char *url);                                          // Open URL with default system browser (if available)
 
-    // Input-related functions: keyboard
-    bool IsKeyPressed(int key);                                             // Detect if a key has been pressed once
-    bool IsKeyDown(int key);                                                // Detect if a key is being pressed
-    bool IsKeyReleased(int key);                                            // Detect if a key has been released once
-    bool IsKeyUp(int key);                                                  // Detect if a key is NOT being pressed
-    void SetExitKey(int key);                                               // Set a custom key to exit program (default is ESC)
-    int GetKeyPressed(void);                                                // Get key pressed (keycode), call it multiple times for keys queued
-    int GetCharPressed(void);                                               // Get char pressed (unicode), call it multiple times for chars queued
-
     // Input-related functions: gamepads
     bool IsGamepadAvailable(int gamepad);                                   // Detect if a gamepad is available
     bool IsGamepadName(int gamepad, const char *name);                      // Check gamepad name (if available)

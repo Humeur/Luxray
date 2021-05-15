@@ -48,6 +48,12 @@ class Keyboard {
         static inline int getCharPressed() {
             return ::GetCharPressed();
         }
+
+        /*
+        * Added functions
+        */
+
+        //Todo add getKeyPressedTime (something like that)
 };
 
 #endif

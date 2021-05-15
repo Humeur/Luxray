@@ -262,105 +262,88 @@ namespace Luxray {
             }
 
             // Set background color (framebuffer clear color)
-            inline Window &clearBackground(Color color = WHITE) {
+            static inline void clearBackground(Color color = WHITE) {
                 ::ClearBackground(color);
-                return *this;
             }
 
             // Setup canvas (framebuffer) to start drawing
-            inline Window &beginDrawing() {
+            static inline void beginDrawing() {
                 ::BeginDrawing();
-                return *this;
             }
 
             // End canvas drawing and swap buffers (double buffering)
-            inline Window &endDrawing() {
+            static inline void endDrawing() {
                 ::EndDrawing();
-                return *this;
             }
 
             // Initialize 2D mode with custom camera (2D)
-            inline Window &beginMode2D(Camera2D camera) {
+            static inline void beginMode2D(Camera2D camera) {
                 ::BeginMode2D(camera);
-                return *this;
             }
 
             // Ends 2D mode with custom camera
-            inline Window &endMode2D() {
+            static inline void endMode2D() {
                 ::EndMode2D();
-                return *this;
             }
 
             // Initializes 3D mode with custom camera (3D)
-            inline Window &beginMode3D(Camera3D camera) {
+            static inline void beginMode3D(Camera3D camera) {
                 ::BeginMode3D(camera);
-                return *this;
             }
 
             // Ends 3D mode and returns to default 2D orthographic mode
-            inline Window &endMode3D() {
+            static inline void endMode3D() {
                 ::EndMode3D();
-                return *this;
             }
 
             // Initializes render texture for drawing
-            inline Window &beginTextureMode(RenderTexture2D target) {
+            static inline void beginTextureMode(RenderTexture2D target) {
                 ::BeginTextureMode(target);
-                return *this;
             }
 
             // Ends drawing to render texture
-            inline Window &endTextureMode() {
+            static inline void endTextureMode() {
                 ::EndTextureMode();
-                return *this;
             }
 
             // Begin custom shader drawing
-            inline Window &beginShaderMode(Shader shader) {
+            static inline void beginShaderMode(Shader shader) {
                 ::BeginShaderMode(shader);
-                return *this;
             }
 
             // End custom shader drawing (use default shader)
-            inline Window &endShaderMode() {
+            static inline void endShaderMode() {
                 ::EndShaderMode();
-                return *this;
             }
 
             // Begin blending mode (alpha, additive, multiplied)
-            inline Window &beginBlendMode(int mode) {
+            static inline void beginBlendMode(int mode) {
                 ::BeginBlendMode(mode);
-                return *this;
             }
 
             // End blending mode (reset to default: alpha blending)
-            inline Window &endBlendMode() {
+            static inline void endBlendMode() {
                 ::EndBlendMode();
-                return *this;
             }
 
             // Begin scissor mode (define screen area for following drawing)
-            inline Window &beginScissorMode(int x, int y, int width, int height) {
+            static inline void beginScissorMode(int x, int y, int width, int height) {
                 ::BeginScissorMode(x, y, width, height);
-                return *this;
             }
 
             // End scissor mode
-            inline Window &endScissorMode() {
+            static inline void endScissorMode() {
                 ::EndScissorMode();
-                return *this;
             }
 
             // Begin stereo rendering
-            inline Window &beginVrStereoMode(VrStereoConfig config) {
+            static inline void beginVrStereoMode(VrStereoConfig config) {
                 ::BeginVrStereoMode(config);
-                return *this;
             }
 
             // End stereo rendering
-            inline Window &endVrStereoMode() {
+            static inline void endVrStereoMode() {
                 ::EndVrStereoMode();
-                return *this;
             }
 
             /*
@@ -403,75 +386,59 @@ namespace Luxray {
             }
 
             //trigger beginDrawing then fun then end drawing, a all in one drawing function
-            inline Window &draw(std::function<void()> fun) {
+            static inline void draw(std::function<void()> fun) {
                 this->beginDrawing();
                 fun();
                 this->endDrawing();
-
-                return *this;
             }
 
             //trigger beginMode2D then fun then endMode2D, a all in one mode2D function
-            inline Window &mode2D(Camera2D camera, std::function<void()> fun) {
+            static inline void mode2D(Camera2D camera, std::function<void()> fun) {
                 this->beginMode2D(camera);
                 fun();
                 this->endMode2D();
-
-                return *this;
             }
 
             //trigger beginMode3D then fun then endMode3D, a all in one mode3D function
-            inline Window &mode3D(Camera3D camera, std::function<void()> fun) {
+            static inline void mode3D(Camera3D camera, std::function<void()> fun) {
                 this->beginMode3D(camera);
                 fun();
                 this->endMode3D();
-
-                return *this;
             }
 
             //trigger beginTextureMode then fun then endTextureMode, a all in one textureMode function
-            inline Window &textureMode(RenderTexture2D target, std::function<void()> fun) {
+            static inline void textureMode(RenderTexture2D target, std::function<void()> fun) {
                 this->beginTextureMode(target);
                 fun();
                 this->endTextureMode();
-
-                return *this;
             }
 
             //trigger beginShaderMode then fun then endShaderMode, a all in one shaderMode function
-            inline Window &shaderMode(Shader shader, std::function<void()> fun) {
+            static inline void shaderMode(Shader shader, std::function<void()> fun) {
                 this->beginShaderMode(shader);
                 fun();
                 this->endShaderMode();
-
-                return *this;
             }
 
             //trigger beginBlendMode then fun then endBlendMode, a all in blendMode function
-            inline Window &blendMode(int mode, std::function<void()> fun) {
+            static inline void blendMode(int mode, std::function<void()> fun) {
                 this->beginBlendMode(mode);
                 fun();
                 this->endBlendMode();
-
-                return *this;
             }
 
             //trigger beginScissorMode then fun then endScissorMode, a all in one scissorMode function
-            inline Window &scissorMode(int x, int y, int width, int height, std::function<void()> fun) {
+            static inline void scissorMode(int x, int y, int width, int height, std::function<void()> fun) {
                 this->beginScissorMode(x, y, width, height);
                 fun();
                 this->endScissorMode();
-
-                return *this;
             }
 
             //trigger beginVrStereoMode then fun then endVrStereoMode, a all in one drawing function
-            inline Window &vrStereoMode(VrStereoConfig config, std::function<void()> fun) {
+            static inline void vrStereoMode(VrStereoConfig config, std::function<void()> fun) {
                 this->beginVrStereoMode(config);
                 fun();
                 this->endVrStereoMode();
-
-                return *this;
             }
     };
 }

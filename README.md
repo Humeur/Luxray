@@ -30,3 +30,4 @@ Additions :
 - method overrides
 - method chaining
 - string function and in general using cpp type (char * -> std::string, char ** -> vector)
+- all in one function like (draw), using lambda

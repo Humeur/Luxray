@@ -8,6 +8,7 @@
 #define WINDOW_HPP
 
 #include <iostream>
+#include <functional>
 
 #include "raylib_inc.hpp"
 
@@ -291,7 +292,7 @@ namespace Luxray {
             }
 
             // Initializes 3D mode with custom camera (3D)
-            inline Window &BeginMode3D(Camera3D camera) {
+            inline Window &beginMode3D(Camera3D camera) {
                 ::BeginMode3D(camera);
                 return *this;
             }
@@ -399,6 +400,78 @@ namespace Luxray {
             //override of the getMonitorName function, return the current monitor name
             inline const std::string getMonitorName() {
                 return this->getMonitorName(this->getCurrentMonitor());
+            }
+
+            //trigger beginDrawing then fun then end drawing, a all in one drawing function
+            inline Window &draw(std::function<void()> fun) {
+                this->beginDrawing();
+                fun();
+                this->endDrawing();
+
+                return *this;
+            }
+
+            //trigger beginMode2D then fun then endMode2D, a all in one mode2D function
+            inline Window &mode2D(Camera2D camera, std::function<void()> fun) {
+                this->beginMode2D(camera);
+                fun();
+                this->endMode2D();
+
+                return *this;
+            }
+
+            //trigger beginMode3D then fun then endMode3D, a all in one mode3D function
+            inline Window &mode3D(Camera3D camera, std::function<void()> fun) {
+                this->beginMode3D(camera);
+                fun();
+                this->endMode3D();
+
+                return *this;
+            }
+
+            //trigger beginTextureMode then fun then endTextureMode, a all in one textureMode function
+            inline Window &textureMode(RenderTexture2D target, std::function<void()> fun) {
+                this->beginTextureMode(target);
+                fun();
+                this->endTextureMode();
+
+                return *this;
+            }
+
+            //trigger beginShaderMode then fun then endShaderMode, a all in one shaderMode function
+            inline Window &shaderMode(Shader shader, std::function<void()> fun) {
+                this->beginShaderMode(shader);
+                fun();
+                this->endShaderMode();
+
+                return *this;
+            }
+
+            //trigger beginBlendMode then fun then endBlendMode, a all in blendMode function
+            inline Window &blendMode(int mode, std::function<void()> fun) {
+                this->beginBlendMode(mode);
+                fun();
+                this->endBlendMode();
+
+                return *this;
+            }
+
+            //trigger beginScissorMode then fun then endScissorMode, a all in one scissorMode function
+            inline Window &scissorMode(int x, int y, int width, int height, std::function<void()> fun) {
+                this->beginScissorMode(x, y, width, height);
+                fun();
+                this->endScissorMode();
+
+                return *this;
+            }
+
+            //trigger beginVrStereoMode then fun then endVrStereoMode, a all in one drawing function
+            inline Window &vrStereoMode(VrStereoConfig config, std::function<void()> fun) {
+                this->beginVrStereoMode(config);
+                fun();
+                this->endVrStereoMode();
+
+                return *this;
             }
     };
 }

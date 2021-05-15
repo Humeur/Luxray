@@ -167,6 +167,36 @@ namespace Luxray {
             static inline void drawRectangle(Rectangle rec, float roundness, int segments, int lineThick, Color color) {
                 ::DrawRectangleRoundedLines(rec, roundness, segments, lineThick, color);
             }
+
+            // Draw a color-filled triangle (vertex in counter-clockwise order!)
+            static inline void drawTriangle(Vector2 v1, Vector2 v2, Vector2 v3, Color color) {
+                ::DrawTriangle(v1, v2, v3, color);
+            }
+
+            // Draw triangle outline (vertex in counter-clockwise order!)
+            static inline void drawTriangle(Vector2 v1, Vector2 v2, Vector2 v3, Color color) {
+                ::DrawTriangleLines(v1, v2, v3, color);
+            }
+
+            // Draw a triangle fan defined by points (first vertex is the center)
+            static inline void drawTriangle(Vector2 *points, int pointsCount, Color color) {
+                ::DrawTriangleFan(points, pointsCount, color);
+            }
+
+            // Draw a triangle strip defined by points
+            static inline void drawTriangle(Vector2 *points, int pointsCount, Color color) {
+                ::DrawTriangleStrip(points, pointsCount, color);
+            }
+
+            // Draw a regular polygon (Vector version)
+            static inline void drawPoly(Vector2 center, int sides, float radius, float rotation, Color color) {
+                ::DrawPoly(center, sides, radius, rotation, color);
+            }
+
+            // Draw a polygon outline of n sides
+            static inline void drawPoly(Vector2 center, int sides, float radius, float rotation, Color color) {
+                ::DrawPolyLines(center, sides, radius, rotation, color);
+            }
     };
 }
 

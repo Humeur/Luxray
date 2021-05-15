@@ -263,7 +263,7 @@ namespace Luxray {
 
             // Set background color (framebuffer clear color)
             inline Window &clearBackground(Color color = WHITE) {
-                ::ClearBackground(color)
+                ::ClearBackground(color);
                 return *this;
             }
 
@@ -305,7 +305,7 @@ namespace Luxray {
 
             // Initializes render texture for drawing
             inline Window &beginTextureMode(RenderTexture2D target) {
-                ::BeginTextureMode(RenderTexture2D target);
+                ::BeginTextureMode(target);
                 return *this;
             }
 

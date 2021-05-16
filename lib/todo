@@ -517,3 +517,5 @@ colors
 
 do:
     check override
+    check const &
+    handle international keyboard

@@ -4,8 +4,8 @@
 ** Discord: Humeur#0001
 */
 
-#ifndef CURSOR_HPP
-#define CURSOR_HPP
+#ifndef SHAPES_HPP
+#define SHAPES_HPP
 
 #include "raylib_inc.hpp"
 

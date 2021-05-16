@@ -66,4 +66,6 @@ int main()
             LR::Window::clearBackground(BLACK);
         });
     }
+
+    LR::Shapes::
 }

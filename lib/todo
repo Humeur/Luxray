@@ -514,3 +514,6 @@ colors
     #define BLANK      (Color){ 0, 0, 0, 0 }                // Transparent
     #define MAGENTA    (Color){ 255, 0, 255, 255 }          // Magenta
     #define RAYWHITE   (Color){ 245, 245, 245, 255 }        // Ray White
+
+do:
+    check override

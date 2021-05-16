@@ -49,33 +49,33 @@ namespace Luxray {
             }
 
             // Draw a line using cubic-bezier curves in-out
-            static inline void drawLine(Vector2 startPos, Vector2 endPos, float thick, Color color) {
+            static inline void drawLineBezier(Vector2 startPos, Vector2 endPos, float thick, Color color) {
                 ::DrawLineBezier(startPos, endPos, thick, color);
             }
 
             //Draw line using quadratic bezier curves with a control point
-            static inline void drawLine(Vector2 startPos, Vector2 endPos, Vector2 controlPos, float thick, Color color) {
+            static inline void drawLineBezierQuad(Vector2 startPos, Vector2 endPos, Vector2 controlPos, float thick, Color color) {
                 ::DrawLineBezierQuad(startPos, endPos, controlPos, thick, color);
             }
 
             // Draw lines sequence
-            static inline void drawLine(Vector2 *points, int pointsCount, Color color) {
+            static inline void drawLineStrip(Vector2 *points, int pointsCount, Color color) {
                 ::DrawLineStrip(points, pointsCount, color);
             }
 
             // Draw a color-filled circle
             static inline void drawCircle(int centerX, int centerY, float radius, Color color) {
-                ::DrawCircle(centerX, centerY, radius, color)
+                ::DrawCircle(centerX, centerY, radius, color);
             }
 
             // Draw a piece of a circle
-            static inline void drawCircle(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color) {
-                ::DrawCircleSector(center, radius, startAngle, endAngle, segments, color)
+            static inline void drawCircleSector(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color) {
+                ::DrawCircleSector(center, radius, startAngle, endAngle, segments, color);
             }
 
             // Draw circle sector outline
-            static inline void drawCircle(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color) {
-                ::DrawCircleSectorLines(center, radius, startAngle, endAngle, segments, color)
+            static inline void drawCircleSectorLines(Vector2 center, float radius, float startAngle, float endAngle, int segments, Color color) {
+                ::DrawCircleSectorLines(center, radius, startAngle, endAngle, segments, color);
             }
 
             // Draw a gradient-filled circle
@@ -89,7 +89,7 @@ namespace Luxray {
             }
 
             // Draw circle outline
-            static inline void drawCircle(int centerX, int centerY, float radius, Color color) {
+            static inline void drawCircleLines(int centerX, int centerY, float radius, Color color) {
                 ::DrawCircleLines(centerX, centerY, radius, color);
             }
 
@@ -99,7 +99,7 @@ namespace Luxray {
             }
 
             // Draw ellipse outline
-            static inline void drawEllipse(int centerX, int centerY, float radiusH, float radiusV, Color color) {
+            static inline void drawEllipseLines(int centerX, int centerY, float radiusH, float radiusV, Color color) {
                 ::DrawEllipseLines(centerX, centerY, radiusH, radiusV, color);
             }
 
@@ -109,7 +109,7 @@ namespace Luxray {
             }
 
             // Draw ring outline
-            static inline void drawRing(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color) {
+            static inline void drawRingLines(Vector2 center, float innerRadius, float outerRadius, float startAngle, float endAngle, int segments, Color color) {
                 ::DrawRingLines(center, innerRadius, outerRadius, startAngle, endAngle, segments, color);
             }
 
@@ -134,32 +134,32 @@ namespace Luxray {
             }
 
             // Draw a vertical-gradient-filled rectangle
-            static inline void drawRectangle(int posX, int posY, int width, int height, Color color1, Color color2) {
+            static inline void drawRectangleGradientV(int posX, int posY, int width, int height, Color color1, Color color2) {
                 ::DrawRectangleGradientV(posX, posY, width, height, color1, color2);
             }
 
             // Draw a horizontal-gradient-filled rectangle
-            static inline void drawRectangle(int posX, int posY, int width, int height, Color color1, Color color2) {
+            static inline void drawRectangleGradientH(int posX, int posY, int width, int height, Color color1, Color color2) {
                 ::DrawRectangleGradientH(posX, posY, width, height, color1, color2);
             }
 
             // Draw a gradient-filled rectangle with custom vertex colors
-            static inline void drawRectangle(Rectangle rec, Color col1, Color col2, Color col3, Color col4) {
+            static inline void drawRectangleEx(Rectangle rec, Color col1, Color col2, Color col3, Color col4) {
                 ::DrawRectangleGradientEx(rec, col1, col2, col3, col4);
             }
 
             // Draw rectangle outline
-            static inline void drawRectangle(int posX, int posY, int width, int height, Color color) {
+            static inline void drawRectangleLines(int posX, int posY, int width, int height, Color color) {
                 ::DrawRectangleLines(posX, posY, width, height, color);
             }
 
             // Draw rectangle outline with extended parameters
-            static inline void drawRectangle(Rectangle rec, int lineThick, Color color) {
+            static inline void drawRectangleLines(Rectangle rec, int lineThick, Color color) {
                 ::DrawRectangleLinesEx(rec, lineThick, color);
             }
 
             // Draw rectangle with rounded edges
-            static inline void drawRectangle(Rectangle rec, float roundness, int segments, Color color) {
+            static inline void drawRectangleLines(Rectangle rec, float roundness, int segments, Color color) {
                 ::DrawRectangleRounded(rec, roundness, segments, color);
             }
 
@@ -174,17 +174,17 @@ namespace Luxray {
             }
 
             // Draw triangle outline (vertex in counter-clockwise order!)
-            static inline void drawTriangle(Vector2 v1, Vector2 v2, Vector2 v3, Color color) {
+            static inline void drawTriangleLines(Vector2 v1, Vector2 v2, Vector2 v3, Color color) {
                 ::DrawTriangleLines(v1, v2, v3, color);
             }
 
             // Draw a triangle fan defined by points (first vertex is the center)
-            static inline void drawTriangle(Vector2 *points, int pointsCount, Color color) {
+            static inline void drawTriangleFan(Vector2 *points, int pointsCount, Color color) {
                 ::DrawTriangleFan(points, pointsCount, color);
             }
 
             // Draw a triangle strip defined by points
-            static inline void drawTriangle(Vector2 *points, int pointsCount, Color color) {
+            static inline void drawTriangleStrip(Vector2 *points, int pointsCount, Color color) {
                 ::DrawTriangleStrip(points, pointsCount, color);
             }
 
@@ -194,7 +194,7 @@ namespace Luxray {
             }
 
             // Draw a polygon outline of n sides
-            static inline void drawPoly(Vector2 center, int sides, float radius, float rotation, Color color) {
+            static inline void drawPolyLines(Vector2 center, int sides, float radius, float rotation, Color color) {
                 ::DrawPolyLines(center, sides, radius, rotation, color);
             }
 
@@ -205,7 +205,7 @@ namespace Luxray {
 
             // Check collision between two circles
             static inline bool checkCollision(Vector2 center1, float radius1, Vector2 center2, float radius2) {
-                return ::CheckCollisionCircle(center1, radius1, center2, radius2);
+                return ::CheckCollisionCircles(center1, radius1, center2, radius2);
             }
 
             // Check collision between circle and rectangle
@@ -236,6 +236,23 @@ namespace Luxray {
             // Get collision rectangle for two rectangles collision
             static inline Rectangle getCollision(Rectangle rec1, Rectangle rec2) {
                 return ::GetCollisionRec(rec1, rec2);
+            }
+
+            /*
+            * Added functions
+            */
+
+            // Draw a vertical-gradient-filled if horizontal is false otherwise a horizontal-gradient-filled rectangle
+            static inline void drawRectangle(int posX, int posY, int width, int height, Color color1, Color color2, bool horizontal) {
+                if (horizontal) {
+                    ::DrawRectangleGradientH(posX, posY, width, height, color1, color2);
+                } else {
+                    ::DrawRectangleGradientV(posX, posY, width, height, color1, color2);
+                }
+            }
+
+            static inline void drawRectangle(Rectangle rec, Color col1, Color col2, Color col3, Color col4) {
+                ::DrawRectangleGradientEx(rec, col1, col2, col3, col4);
             }
     };
 }

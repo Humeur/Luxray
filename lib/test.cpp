@@ -18,11 +18,13 @@ class Bob {
 
 int main()
 {
-    /*LR::Window window(1920, 1080, "Bob's Adventure");
+    LR::Window window;
 
-    window.setPosition(0,0)
-          .setTargetFPS(60)
-          .setSize(window.getMonitorWidth(), window.getMonitorHeight());
+    window.setTitle("Wheel of chance !")
+            .setSize(window.getMonitorWidth(), window.getMonitorHeight())
+            .setTargetFPS(60)
+            .setPosition(0, 0)
+            .setState(FLAG_WINDOW_RESIZABLE);
 
     LR::Cursor::disable();
     LR::Cursor::hide();
@@ -33,39 +35,16 @@ int main()
 
     while (!window.shouldClose())
     {
-        bob.size += (LR::Mouse::getWheelMove() * 4);
-
-        if (LR::Keyboard::isKeyDown(KEY_LEFT_SHIFT)) bob.speed = 3;
-        if (LR::Keyboard::isKeyDown(KEY_RIGHT)) bob.x += 4 * bob.speed;
-        if (LR::Keyboard::isKeyDown(KEY_LEFT)) bob.x -= 4 * bob.speed;
-        if (LR::Keyboard::isKeyDown(KEY_UP)) bob.y -= 4 * bob.speed;
-        if (LR::Keyboard::isKeyDown(KEY_DOWN)) bob.y += 4 * bob.speed;
-
-        LR::Window::draw([bob](){
+        LR::Window::draw([&window]() {
             LR::Window::clearBackground(BLACK);
 
-            DrawText(bob.face.c_str(), bob.x, bob.y, bob.size, bob.color);
+            LR::Shapes::drawCircleSector((Vector2){(float)window.getWidth() / 2, (float)window.getHeight() / 2},
+                                         (float)window.getWidth() / 4,
+                                         0.0f,
+                                         90.0f,
+                                         0.1f, RED);
         });
     }
 
-    return 0;*/
-
-    LR::Window window;
-
-    window.setTitle("Wheel of chance !")
-          .setSize(window.getMonitorWidth(), window.getMonitorHeight())
-          .setTargetFPS(60)
-          .setPosition(0, 0)
-          .setState(FLAG_WINDOW_RESIZABLE);
-
-    LR::Cursor::disable();
-    LR::Cursor::hide();
-
-    while (!window.shouldClose()) {
-        LR::Window::draw([]() {
-            LR::Window::clearBackground(BLACK);
-        });
-    }
-
-    LR::Shapes::
+    return 0;
 }

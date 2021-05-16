@@ -17,22 +17,22 @@ namespace Luxray {
             ~Mouse() {}
 
             // Detect if a mouse button has been pressed once
-            static inline bool isButtonPressed(int button) {
+            static inline bool isButtonPressed(const int &button) {
                 return ::IsMouseButtonPressed(button);
             }
 
             // Detect if a mouse button is being pressed
-            static inline bool isButtonDown(int button) {
+            static inline bool isButtonDown(const int &button) {
                 return ::IsMouseButtonDown(button);
             }
 
             // Detect if a mouse button has been released once
-            static inline bool isButtonReleased(int button) {
+            static inline bool isButtonReleased(const int &button) {
                 return ::IsMouseButtonReleased(button);
             }
 
             // Detect if a mouse button is NOT being pressed
-            static inline bool isButtonUp(int button) {
+            static inline bool isButtonUp(const int &button) {
                 return ::IsMouseButtonUp(button);
             }
 
@@ -52,17 +52,17 @@ namespace Luxray {
             }
 
             // Set mouse position XY
-            static inline void setPosition(int x, int y) {
+            static inline void setPosition(const int &x, const int &y) {
                 return ::SetMousePosition(x, y);
             }
 
             // Set mouse offset
-            static inline void setOffset(int offsetX, int offsetY) {
+            static inline void setOffset(const int &offsetX, const int &offsetY) {
                 return ::SetMouseOffset(offsetX, offsetY);
             }
 
             // Set mouse scaling
-            static inline void setScale(float scaleX, float scaleY) {
+            static inline void setScale(const float &scaleX, const float &scaleY) {
                 return ::SetMouseScale(scaleX, scaleY);
             }
 
@@ -72,7 +72,7 @@ namespace Luxray {
             }
 
             // Set mouse cursor
-            static inline void setCursor(int cursor) {
+            static inline void setCursor(const int &cursor) {
                 return ::SetMouseCursor(cursor);
             }
 

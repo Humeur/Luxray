@@ -17,27 +17,27 @@ namespace Luxray {
             ~Keyboard() {}
 
             // Detect if a key has been pressed once
-            static inline bool isKeyPressed(int key) {
+            static inline bool isKeyPressed(const int &key) {
                 return ::IsKeyPressed(key);
             }
 
             // Detect if a key is being pressed
-            static inline bool isKeyDown(int key) {
+            static inline bool isKeyDown(const int &key) {
                 return ::IsKeyDown(key);
             }
 
             // Detect if a key has been released once
-            static inline bool isKeyReleased(int key) {
+            static inline bool isKeyReleased(const int &key) {
                 return ::IsKeyReleased(key);
             }
 
             // Detect if a key is NOT being pressed
-            static inline bool isKeyUp(int key) {
+            static inline bool isKeyUp(const int &key) {
                 return ::IsKeyUp(key);
             }
 
             // Set a custom key to exit program (default is ESC)
-            static inline void setExitKey(int key) {
+            static inline void setExitKey(const int &key) {
                 ::SetExitKey(key);
             }
 

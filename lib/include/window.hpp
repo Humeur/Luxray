@@ -442,6 +442,13 @@ namespace Luxray {
                 fun();
                 Window::endVrStereoMode();
             }
+
+            void DrawLine3D(Vector3 startPos, Vector3 endPos, Color color);                                    // Draw a line in 3D world space
+
+            // Draw a line in 3D world space
+            static inline void drawLine3D(const Vector3 &startPos, const Vector3 &endPos, const Color &color) {
+                ::DrawLine3D(startPos, endPos, color);
+            }
     };
 }
 

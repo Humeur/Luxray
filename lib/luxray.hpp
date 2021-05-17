@@ -12,5 +12,6 @@
 #include "include/mouse.hpp"
 #include "include/window.hpp"
 #include "include/shapes.hpp"
+#include "include/models.hpp"
 
 #endif

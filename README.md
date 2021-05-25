@@ -29,5 +29,5 @@ Additions :
 - optional parameters for some methods
 - method overrides
 - method chaining
-- string function and in general using cpp type (char * -> std::string, char ** -> vector)
+- string function and in general using cpp type (char * -> std::string, char ** -> std::vector)
 - all in one function like (draw), using lambda

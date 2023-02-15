@@ -23,7 +23,7 @@
 <h2 align="center">Goal and functionalities</h2>
 
 <p align="center">
-This project is a very summary and incomplete implementation, its only purpose was to be used during a video game creation project.
+This project is a very summary and incomplete implementation, its only purpose was to be used during a video game creation project (Bomberman project).
 His main interest is to create a wrap adding object oriented features, to write better and faster code and also, at this time, to familiarize myself with the wrap concept.
 </p>
 

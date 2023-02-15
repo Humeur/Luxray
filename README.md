@@ -26,6 +26,8 @@
 This project is a very summary and incomplete implementation, its only purpose was to be used during a video game creation project (Bomberman project).
 His main interest is to create a wrap adding object oriented features, to write better and faster code and also, at this time, to familiarize myself with the wrap concept.
 </p>
+<p align="center">There are also a few "todo" scattered around, the project was stopped during development anyway, the goal was already more than fulfilled and this wrapper was starting to become a bit overkill.</p>
+
 
 <p>A small list of additions that this wrap brings to the library :
 

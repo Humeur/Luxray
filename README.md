@@ -18,16 +18,23 @@
 <p align="center">
   Donate to the creator of Raylib: https://github.com/sponsors/raysan5
 </p>
+<br>
 
-Additions :
+<h2 align="center">Goal and functionalities</h2>
 
-- functions are now camelCase
-- renamed functions with more oo type like : .isWindowFullscreen is now .isFullscreen
-- added functions like .getCurrentMonitor...
-- now getter and setter are the only way to access data
-- destructor now unload object
-- optional parameters for some methods
-- method overrides
-- method chaining
-- string function and in general using cpp type (char * -> std::string, char ** -> std::vector)
-- all in one function like (draw), using lambda
+<p align="center">
+This project is a very summary and incomplete implementation, its only purpose was to be used during a video game creation project.
+His main interest is to create a wrap adding object oriented features, to write better and faster code and also, at this time, to familiarize myself with the wrap concept.
+</p>
+
+<p>A small list of additions that this wrap brings to the library :
+
+- Obviously each "objects" has now its own class, his attributes and corresponding methods.
+- As part of the first point getter and setter functions are the only way to access data.
+- Also because of the first point, destructors now unload objects.
+- The method chaining has been implemented on a large number of functions.
+- Some types were changed to available alternatives in C++. (example: char * -> std::string, char ** -> string vectors).
+- "All-in-one" functions have been created, such as the draw function that starts and stops the drawing mode and executes a lambda function in between.
+- Functions names are now camelCase and named with a more "object-oriented" name (i.e. avoiding repeating the object name corresponding to the method in each name).
+- Some functions have now optional parameters with default values
+</p>
